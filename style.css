@@ -2,7 +2,12 @@
     @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 /*главный экран*/
+html {
+    height: 96%;
+}
+
 body {
+    min-height: 83%;
     background: url(img/pexels-tirachard-kumtanom-733852.jpg);
     background-size: 100%;
     position: relative;
@@ -21,14 +26,15 @@ body {
 }
 
 #form-container button {
+    padding: 1px 0px;
     width: 165px;
-    height: 40px;
+    height: 42px;
     background: #E8BE96;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     font-family: 'Special Elite', cursive;
     font-size: 20px;
-    margin-top: 220px;
+    margin-top: 228px;
     margin-left: 98px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -38,7 +44,7 @@ body {
     position: absolute;
     width: 300px;
     height: 239px;
-    margin: 30px;
+    padding: 30px;
 }
 
 #authorization-form h1 {
@@ -48,13 +54,14 @@ body {
     text-align: center;
     text-transform: uppercase;
     margin: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 35px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 /*Блок ввода почты*/
 #email-input-container p {
     font-family: 'Special Elite', cursive;
+    margin: 0px;
     font-size: 14px;
     line-height: 20px;
     margin-bottom: 5px;
@@ -78,9 +85,9 @@ body {
 #password-input-container p {
     font-family: 'Special Elite', cursive;
     font-size: 14px;
-    line-height: 10px;
+    line-height: 20px;
     text-align: right;
-    margin-top: 16px;
+    margin-top: 10px;
     margin-bottom: 5px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
