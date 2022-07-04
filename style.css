@@ -3,11 +3,11 @@
 
 /*главный экран*/
 html {
-    height: 96%;
+    height: 86%;
 }
 
 body {
-    min-height: 83%;
+    min-height: 93%;
     background: url(img/pexels-tirachard-kumtanom-733852.jpg);
     background-size: 100%;
     position: relative;
