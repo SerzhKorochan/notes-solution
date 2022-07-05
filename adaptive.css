@@ -191,3 +191,100 @@
     }
 
 }
+
+
+@media screen and (max-width: 300px){
+    #authorization-form {
+        position: absolute;
+        width: 196px;
+        height: 168px;
+        padding: 12px;
+    }
+
+    #authorization-form h1 {
+        font-family: 'Special Elite', cursive;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0px;
+        margin-bottom: 13px;
+        text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    #form-container button {
+        width: 100px;
+        height: 26px;
+        background: #E8BE96;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border: none;
+        font-family: 'Special Elite', cursive;
+        font-size: 12px;
+        margin-top: 142px;
+        margin-left: 58px;
+        text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    #form-container {
+        background: rgba(220, 216, 213, 0.5);
+        box-shadow: 0px 0px 4px 3px rgb(0 0 0 / 25%);
+        backdrop-filter: blur(5px);
+        width: 220px;
+        height: 192px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #email-input-container p {
+        font-family: 'Special Elite', cursive;
+        margin: 0px;
+        font-size: 12px;
+        line-height: 12px;
+        margin-bottom: 3px;
+        text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    #email-input-container img {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        margin: 5px;
+    }
+
+    #email-input-container input {
+        padding-left: 20px;
+        height: 17px;
+        border: none;
+        width: 174px;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    #password-input-container p {
+        font-family: 'Special Elite', cursive;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: right;
+        margin-top: 8px;
+        margin-bottom: 3px;
+        text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    #password-input-container img {
+        position: absolute;
+        margin: 5px;
+        margin-left: 180px;
+        width: 11px;    
+    }
+
+    #password-input-container input {
+        padding-left: 8px;
+        height: 16px;
+        border: none;
+        width: 186px;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+}
+
