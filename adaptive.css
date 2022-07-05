@@ -96,7 +96,7 @@
 }
 
 
-@media screen and (max-width: 320px){
+@media screen and (max-width: 550px){
     #authorization-form {
         position: absolute;
         width: 242px;
