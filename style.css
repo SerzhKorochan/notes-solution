@@ -1,0 +1,111 @@
+/*подключение шрифта*/
+    @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+/*главный экран*/
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+#full-bg {
+    height: 100%;
+    background: url(img/pexels-tirachard-kumtanom-733852.jpg) center no-repeat;
+    background-size: cover;
+}
+
+/*Главный блок авторизации*/
+#form-container {
+    background: rgba(220, 216, 213, 0.5);
+    box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(5px);
+    width: 360px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+}
+
+#form-container button {
+    padding: 1px 0px;
+    width: 165px;
+    height: 42px;
+    background: #E8BE96;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border: none;
+    font-family: 'Special Elite', cursive;
+    font-size: 20px;
+    margin-top: 228px;
+    margin-left: 98px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*Блок авторизации*/
+#authorization-form {
+    position: absolute;
+    width: 300px;
+    height: 239px;
+    padding: 30px;
+}
+
+#authorization-form h1 {
+    font-family: 'Special Elite', cursive;
+    font-weight: 400;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 0px;
+    margin-bottom: 35px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+/*Блок ввода почты*/
+#email-input-container p {
+    font-family: 'Special Elite', cursive;
+    margin: 0px;
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 5px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#email-input-container input {
+    padding-left: 25px;
+    height: 23px;
+    border:none;
+    width: 273px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#email-input-container img {
+    position: absolute;
+    margin: 6px;
+}
+
+/*Блок ввода пароля*/
+#password-input-container p {
+    font-family: 'Special Elite', cursive;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#password-input-container input {
+    padding-left: 8px;
+    height: 23px;
+    border:none;
+    width: 290px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#password-input-container img {
+    position: absolute;
+    margin: 5px;
+    margin-left: 280px;
+}
+
