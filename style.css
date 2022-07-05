@@ -2,17 +2,16 @@
     @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
 
 /*главный экран*/
-html {
-    height: 86%;
+html,
+body {
+    margin: 0;
+    height: 100%;
 }
 
-body {
-    min-height: 93%;
-    background: url(img/pexels-tirachard-kumtanom-733852.jpg);
-    background-size: 100%;
-    position: relative;
-    background-position: 0px;
-    background-repeat: no-repeat;
+#full-bg {
+    height: 100%;
+    background: url(img/pexels-tirachard-kumtanom-733852.jpg) center no-repeat;
+    background-size: cover;
 }
 
 /*Главный блок авторизации*/
@@ -22,7 +21,11 @@ body {
     backdrop-filter: blur(5px);
     width: 360px;
     height: 300px;
-    margin: 210px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
 }
 
 #form-container button {
