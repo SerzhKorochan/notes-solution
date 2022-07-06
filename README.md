@@ -1,2 +1,2 @@
 # notes-solution
-Web application to make your life simpler.
+Web application to make your life simpler...
