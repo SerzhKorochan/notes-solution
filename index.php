@@ -12,4 +12,9 @@ $app->get('/', function (Request $request, Response $response, $args) {
     return $response;
 });
 
+$app->get('/admin', function (Request $request, Response $response, $args) {
+    $response->getBody()->write("Admin Page!");
+    return $response;
+});
+
 $app->run();
