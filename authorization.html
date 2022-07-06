@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Notes-solution</title>
 
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="adaptive.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adaptive.css">
 </head>
 <body>
     <div id="full-bg">
-        <div id="form-container">
+        <form id="form-container" action="#" method="post">
 
             <div id="authorization-form">
                 <h1>Make some note :)</h1>
@@ -19,20 +19,20 @@
                 <div id="email-input-container">
                     <p>leave your email here...</p>
                     <img src="img/Vector.svg">
-                    <input> 
+                    <input type="email" name="auth_email" required> 
                 </div>
 
                 <div id="password-input-container">
                     <p>and try to remember password...</p>
                     <img src="img/carbon_password.svg">
-                    <input> 
+                    <input type="password" name="auth_pass" required> 
                 </div>
 
             </div>
 
-            <button>Let's go!</button>
+            <input id="buttonstart" type="submit" value="Let's go!"></input>
 
-        </div>
+        </form>
     </div>  
 
 </body>

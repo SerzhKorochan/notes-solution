@@ -1,8 +1,23 @@
 @media screen and (max-width: 768px){
+    #form-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background: rgba(220, 216, 213, 0.5);
+        box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
+        width: 487px;
+        height: 384px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
     #authorization-form {
-        position: absolute;
         width: 405px;
-        height: 324px;
+        height: 205px;
         padding: 41px;
     }
 
@@ -17,7 +32,8 @@
         text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     }
 
-    #form-container button {
+    #buttonstart {
+        margin-bottom: 42px;
         padding: 1px 0px;
         width: 223px;
         height: 56px;
@@ -26,22 +42,7 @@
         border: none;
         font-family: 'Special Elite', cursive;
         font-size: 20px;
-        margin-top: 301px;
-        margin-left: 133px;
         text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
-    }
-
-    #form-container {
-        background: rgba(220, 216, 213, 0.5);
-        box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
-        backdrop-filter: blur(5px);
-        width: 487px;
-        height: 406px;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%);
     }
 
     #email-input-container p {
@@ -98,9 +99,8 @@
 
 @media screen and (max-width: 550px){
     #authorization-form {
-        position: absolute;
         width: 242px;
-        height: 194px;
+        height: 128px;
         padding: 24px;
     }
 
@@ -115,26 +115,29 @@
         text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
     }
 
-    #form-container button {
+    #buttonstart {
+        margin-bottom: 25px;
+        padding: 1px 0px;
         width: 133px;
-        height: 34px;
+        height: 49px;
         background: #E8BE96;
-        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         border: none;
         font-family: 'Special Elite', cursive;
-        font-size: 20px;
-        margin-top: 185px;
-        margin-left: 79px;
-        text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        font-size: 17px;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 
     #form-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
         background: rgba(220, 216, 213, 0.5);
-        box-shadow: 0px 0px 4px 3px rgb(0 0 0 / 25%);
+        box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
         backdrop-filter: blur(5px);
         width: 290px;
         height: 242px;
-        position: absolute;
+        position: relative;
         top: 50%;
         left: 50%;
         margin-right: -50%;
@@ -191,3 +194,103 @@
     }
 
 }
+
+
+@media screen and (max-width: 300px){
+    #authorization-form {
+        width: 196px;
+        height: 106px;
+        padding: 12px;
+    }
+
+    #authorization-form h1 {
+        font-family: 'Special Elite', cursive;
+        font-weight: 400;
+        font-size: 16px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 0px;
+        margin-bottom: 13px;
+        text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    #buttonstart {
+        margin-top: 3px;
+        margin-bottom: 28px;
+        padding: 1px 0px;
+        width: 100px;
+        height: 26px;
+        background: #E8BE96;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+        border: none;
+        font-family: 'Special Elite', cursive;
+        font-size: 12px;
+        text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    #form-container {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        background: rgba(220, 216, 213, 0.5);
+        box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
+        backdrop-filter: blur(5px);
+        width: 220px;
+        height: 183px;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #email-input-container p {
+        font-family: 'Special Elite', cursive;
+        margin: 0px;
+        font-size: 12px;
+        line-height: 12px;
+        margin-bottom: 3px;
+        text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    #email-input-container img {
+        width: 10px;
+        height: 10px;
+        position: absolute;
+        margin: 5px;
+    }
+
+    #email-input-container input {
+        padding-left: 20px;
+        height: 17px;
+        border: none;
+        width: 174px;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    #password-input-container p {
+        font-family: 'Special Elite', cursive;
+        font-size: 12px;
+        line-height: 12px;
+        text-align: right;
+        margin-top: 8px;
+        margin-bottom: 3px;
+        text-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+
+    #password-input-container img {
+        position: absolute;
+        margin: 5px;
+        margin-left: 180px;
+        width: 11px;    
+    }
+
+    #password-input-container input {
+        padding-left: 8px;
+        height: 16px;
+        border: none;
+        width: 186px;
+        box-shadow: 0px 4px 4px rgb(0 0 0 / 25%);
+    }
+}
+
