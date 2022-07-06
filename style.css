@@ -16,35 +16,40 @@ body {
 
 /*Главный блок авторизации*/
 #form-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
     background: rgba(220, 216, 213, 0.5);
     box-shadow: 0px 0px 4px 3px rgba(0, 0, 0, 0.25);
     backdrop-filter: blur(5px);
     width: 360px;
     height: 300px;
-    position: absolute;
+    position: relative;
     top: 50%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
 }
 
-#form-container button {
+#buttonstart {
+    margin-bottom: 29px;
     padding: 1px 0px;
     width: 165px;
-    height: 42px;
+    height: 57px;
     background: #E8BE96;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border: none;
     font-family: 'Special Elite', cursive;
     font-size: 20px;
-    margin-top: 228px;
-    margin-left: 98px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+#buttonstart:hover {
+    cursor: pointer;
 }
 
 /*Блок авторизации*/
 #authorization-form {
-    position: absolute;
     width: 300px;
     height: 239px;
     padding: 30px;
