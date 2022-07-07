@@ -1,9 +1,11 @@
 <?php 
     require 'core/helpers/DBConnection.php';
     require 'core/models/UserModel.php';
+    require 'core/models/NoteModel.php';
 
     use Core\Helpers\DBConnection;
     use Core\Models\UserModel;
+    use Core\Models\NoteModel;
 
 
     $obj = new DBConnection;
@@ -14,6 +16,9 @@
         "admin123"
     );
 
-    // var_dump($user->isUserExist());
-    var_dump($user->getUserId());
+    $note = new NoteModel(
+        $obj->getPdoObj(),
+        $user->getUserId()
+    );
+
 ?>
