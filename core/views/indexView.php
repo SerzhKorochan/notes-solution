@@ -12,18 +12,20 @@
 <body>
     <div id="fullBg">
         <header>
-             <div id="textInput"><input type="text"></div>
-             <div id="createNotes">
-                <button>Create</button>
-                <img src="/img/gridicons_create.png" alt="">
-            </div>
+            <form action="/note/create" method="POST">
+                <div id="textInput"><input type="text" name="note_text"></div>
+                <div id="createNotes">
+                    <input type="submit" value="Create"></input>
+                    <img src="/img/gridicons_create.png" alt="">
+                </div>
+            </form>
              <div id="logout">
-                <button>Logout</button>
+                <a href="/logout">Logout</a>
                 <img src="/img/logout.png" alt="">
             </div>
         </header>
         
-        <section>
+        <section class="notes-container">
             <div id="blockFirst">
                 <div id="first"><span>#1.</span></div>
                 <div id="noteferst"><p>My wife asked me to buy some products...</p> </div>

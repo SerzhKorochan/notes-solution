@@ -30,10 +30,17 @@ class MainController {
 
     public function run() {
         $request = $_SERVER['REQUEST_URI'];
+
+        if (isset($_SESSION['user_id'])) {
+            $note = new NoteModel(
+                $this->dbConnection->getPdoObj(), 
+            $_SESSION['user_id']
+            );
+        }
     
         switch ($request) {
             case '/':
-                if (isset($_SESSION['is_auth'])) {
+                if (isset($_SESSION['user_id'])) {
                     require 'core/views/indexView.php';
                 } else {
                     header('Location: /login');
@@ -52,14 +59,14 @@ class MainController {
 
                     if ($user->isUserExist()) {
                         if ($user->isAuthDataCorrect()) {
-                            $_SESSION['is_auth'] = true;
+                            $_SESSION['user_id'] = $user->getUserId();
                             header('Location: /');
                         } else {
                             header('Location: /login');
                         }     
                     } else {
                         if ($user->createUser()) {
-                            $_SESSION['is_auth'] = true;
+                            $_SESSION['user_id'] = $user->getUserId();
                             header('Location: /');
                         }
                     }
@@ -73,6 +80,19 @@ class MainController {
                 $_SESSION = array();
                 session_destroy();
                 header('Location: /login');
+                break;
+            
+            case '/note/create':
+                if (isset($_POST['note_text']) && !empty($_POST['note_text']) && isset($note)) {
+                    $note->createNote($_POST['note_text']);
+                }
+                header('Location: /');
+                break;
+
+            case '/notes': 
+                $noteList = $note->getNotesList();
+                header("Content-Type: application/json");
+                echo json_encode($noteList);
                 break;
 
             default:
