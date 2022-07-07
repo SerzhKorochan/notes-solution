@@ -43,6 +43,12 @@
             return true;
         }
 
+        public function getUserId() {
+            $query_pattern = 'SELECT user.id FROM user WHERE user.email = "%s";';
+            $query = sprintf($query_pattern, $this->email);
+
+            return $this->pdo->query($query)->fetch()['id'];
+        }
     }
 
 ?>

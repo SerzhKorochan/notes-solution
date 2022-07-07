@@ -10,10 +10,10 @@
 
     $user = new UserModel(
         $obj->getPdoObj(),
-        "serzhkorochan@gmail.commm1234",
+        "serzhkorochan@gmail.com",
         "admin123"
     );
 
     // var_dump($user->isUserExist());
-    var_dump($user->createUser());
+    var_dump($user->getUserId());
 ?>
