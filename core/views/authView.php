@@ -11,7 +11,7 @@
 </head>
 <body>
     <div id="full-bg">
-        <form id="form-container" action="#" method="post">
+        <form id="form-container" action="/login" method="post">
 
             <div id="authorization-form">
                 <h1>Make some note :)</h1>
