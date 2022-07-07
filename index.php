@@ -20,5 +20,6 @@
         $obj->getPdoObj(),
         $user->getUserId()
     );
-
+    
+   var_dump($note->getNotesList());
 ?>
