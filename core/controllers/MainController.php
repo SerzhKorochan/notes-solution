@@ -33,7 +33,11 @@ class MainController {
     
         switch ($request) {
             case '/':
-                require 'core/views/indexView.php';
+                if (isset($_SESSION['is_auth'])) {
+                    require 'core/views/indexView.php';
+                } else {
+                    header('Location: /login');
+                }
                 break;
 
             case '/login':
@@ -48,13 +52,14 @@ class MainController {
 
                     if ($user->isUserExist()) {
                         if ($user->isAuthDataCorrect()) {
-                            session_start(['user_id' => $user->getUserId()]);
+                            $_SESSION['is_auth'] = true;
                             header('Location: /');
                         } else {
                             header('Location: /login');
                         }     
                     } else {
                         if ($user->createUser()) {
+                            $_SESSION['is_auth'] = true;
                             header('Location: /');
                         }
                     }
@@ -62,6 +67,12 @@ class MainController {
                     require 'core/views/authView.php';
                 }
             
+                break;
+
+            case '/logout':
+                $_SESSION = array();
+                session_destroy();
+                header('Location: /login');
                 break;
 
             default:
