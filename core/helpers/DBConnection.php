@@ -25,7 +25,6 @@
                 $pdo = new PDO($dsn, $config['user'], $config['pass']);
                 $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-                echo "Connection okay.";
                 $this->pdo = $pdo;
 
             } catch (PDOException $e) {

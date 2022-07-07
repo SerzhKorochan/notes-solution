@@ -31,11 +31,11 @@ class MainController {
         
         switch ($request) {
             case '/':
-                echo "MainPage";
+                require 'core/views/indexView.php';
                 break;
 
             case '/login':
-                echo "LoginPage";
+                require 'core/views/authView.php';
                 break;
 
             default:
