@@ -1,25 +1,9 @@
 <?php 
-    require 'core/helpers/DBConnection.php';
-    require 'core/models/UserModel.php';
-    require 'core/models/NoteModel.php';
+    require 'core/controllers/MainController.php';
 
-    use Core\Helpers\DBConnection;
-    use Core\Models\UserModel;
-    use Core\Models\NoteModel;
+    use Core\Controllers\MainController;
 
+    $mainController = new MainController;
+    $mainController->run();
 
-    $obj = new DBConnection;
-
-    $user = new UserModel(
-        $obj->getPdoObj(),
-        "serzhkorochan@gmail.com",
-        "admin123"
-    );
-
-    $note = new NoteModel(
-        $obj->getPdoObj(),
-        $user->getUserId()
-    );
-    
-   var_dump($note->getNotesList());
 ?>
