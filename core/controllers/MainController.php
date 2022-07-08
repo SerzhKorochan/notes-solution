@@ -83,8 +83,8 @@ class MainController {
                 break;
             
             case '/note/create':
-                if (isset($_POST['note_text']) && !empty($_POST['note_text']) && isset($note)) {
-                    $note->createNote($_POST['note_text']);
+                if (isset($_POST['noteText']) && !empty($_POST['noteText']) && isset($note)) {
+                    $note->createNote($_POST['noteText']);
                 }
                 header('Location: /');
                 break;

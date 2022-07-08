@@ -1,59 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Notes-solution</title>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Notes Solution</title>
 
-    <link rel="stylesheet" type="text/css" href="css/index_style.css">
-    <link rel="stylesheet" type="text/css" href="css/index_adaptive.css">
-</head>
-<body>
-    <div id="fullBg">
-        <header>
-            <form action="/note/create" method="POST">
-                <div id="textInput"><input type="text" name="note_text"></div>
-                <div id="createNotes">
-                    <input type="submit" value="Create"></input>
-                    <img src="/img/gridicons_create.png" alt="">
+        <link rel="stylesheet" href="/css/main_page.css" />
+        <link rel="stylesheet" href="/css/main_page-adaptive.css" />
+    </head>
+    <body>
+        <header class="header container">
+            <form action="/note/create" id="create-note-form" method="post">
+                <input type="text" name="noteText" class="input-note-text" />
+                <div class="create-note-btn-container">
+                    <input id="create-note-btn" type="submit" value="Create" />
+                    <img
+                        class="create-note-icon"
+                        src="/img/create-icon.svg"
+                        alt="create-icon"
+                    />
                 </div>
+                <a href="/logout" id="logout-btn">
+                    Logout
+                    <img
+                        class="logout-icon"
+                        src="/img/logout-icon.svg"
+                        alt="logout-icon"
+                    />
+                </a>
             </form>
-             <div id="logout">
-                <a href="/logout">Logout</a>
-                <img src="/img/logout.png" alt="">
-            </div>
         </header>
-        
-        <section class="notes-container">
-            <div id="blockFirst">
-                <div id="first"><span>#1.</span></div>
-                <div id="noteferst"><p>My wife asked me to buy some products...</p> </div>
-                <img src="/img/ant-design_delete-outlined.png" alt="">
-    
+
+        <section class="notes-list-container">
+            <div class="note-container" tabindex="">
+                <div class="note-text-container">
+                    <span class="note-num">#1.</span>
+                    <p class="note-text">
+                        My wife asked me to buy some products...
+                    </p>
+                </div>
+
+                <a href="#" class="remove-note-btn">
+                    <img src="/img/trash-icon.svg" alt="remove-note-icon" />
+                </a>
             </div>
-            <div id="blockSecond">
-                <div id="second"><span>#2.</span></div>
-                <div id="noteSecond"><p>I have to change something...</p> </div>
-                <img src="/img/ant-design_delete-outlined.png" alt="">
-    
-            </div>
-            <div id="blockThird">
-                <div id="third"><span>#3.</span></div>
-                <div id="noteThird"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna...</p> </div>
-                <img src="/img/ant-design_delete-outlined.png" alt="">
-    
-            </div>
-            <div id="blockFourth">
-                <div id="fourth"><span>#4.</span></div>
-                <div id="noteFourth"><p>"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam...</p> </div>
-                <img src="/img/ant-design_delete-outlined.png" alt="">
-    
+
+            <div class="note-container" tabindex="">
+                <div class="note-text-container">
+                    <span class="note-num">#2.</span>
+                    <p class="note-text">
+                        "Sed ut perspiciatis unde omnis iste natus error sit
+                        voluptatem accusantium doloremque laudantium, totam rem
+                        aperiam, eaque ipsa quae ab illo inventore veritatis et
+                        quasi architecto beatae vitae dicta sunt explicabo. Nemo
+                        enim ipsam voluptatem quia voluptas sit aspernatur aut
+                        odit aut fugit, sed quia consequuntur magni dolores eos
+                        qui ratione voluptatem sequi nesciunt. Neque porro
+                        quisquam...
+                    </p>
+                </div>
+
+                <a href="#" class="remove-note-btn">
+                    <img src="/img/trash-icon.svg" alt="remove-note-icon" />
+                </a>
             </div>
         </section>
-        
-        
-    </div>  
-
-</body>
+    </body>
 </html>
