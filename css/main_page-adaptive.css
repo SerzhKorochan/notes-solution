@@ -49,3 +49,69 @@
         line-height: 21px;
     }
 }
+
+@media screen and (max-width: 656px) {
+    .header {
+        height: 50px;
+        margin-top: 5px;
+    }
+    .input-note-text {
+        height: 30px;
+        font-size: 16px;
+    }
+    .create-note-btn-container,
+    #logout-btn {
+        height: 30px;
+        width: 30px;
+    }
+    #logout-btn,
+    #create-note-btn {
+        font-size: 0px;
+        padding: 0;
+    }
+    .create-note-icon,
+    .logout-icon {
+        right: 5px;
+        top: 5px;
+    }
+    .logout-icon {
+        width: 23px;
+        height: 20px;
+    }
+    .notes-list-container {
+        margin-top: 15px;
+        width: 90%;
+    }
+    .note-text-container {
+        font-size: 15px;
+    }
+    .remove-note-icon {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .input-note-text {
+        width: 300px;
+    }
+    .create-note-btn-container {
+        margin-left: 10px;
+        margin-right: 15px;
+    }
+    .note-container {
+        padding: 5px 5px 5px 5px;
+    }
+}
+
+@media screen and (max-width: 424px) {
+    .input-note-text {
+        width: 255px;
+    }
+}
+
+@media screen and (max-width: 374px) {
+    .input-note-text {
+        width: 195px;
+    }
+}
