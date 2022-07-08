@@ -1,0 +1,51 @@
+@media screen and (max-width: 1170px) {
+    .header {
+        width: 98%;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .input-note-text {
+        width: 450px;
+    }
+}
+
+@media screen and (max-width: 930px) {
+    .input-note-text {
+        width: 400px;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    .input-note-text {
+        width: 353px;
+        font-size: 19px;
+    }
+
+    .create-note-btn-container {
+        margin: 0 20px;
+        width: 107px;
+    }
+    #create-note-btn {
+        padding: 0 0 0 8px;
+    }
+    .create-note-icon {
+        right: 8px;
+    }
+
+    #logout-btn {
+        width: 107px;
+        padding-left: 8px;
+    }
+    .logout-icon {
+        right: 6px;
+    }
+
+    .notes-list-container {
+        width: 611px;
+    }
+    .note-text-container {
+        font-size: 19px;
+        line-height: 21px;
+    }
+}

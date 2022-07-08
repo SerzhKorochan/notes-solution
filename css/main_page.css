@@ -1,4 +1,4 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
 
 html,
 body {
@@ -75,6 +75,7 @@ body {
     box-sizing: border-box;
     cursor: pointer;
     text-align: left;
+    line-height: 45px;
 }
 .create-note-icon {
     width: 20px;
@@ -99,14 +100,14 @@ body {
     text-decoration: none;
     padding-left: 30px;
     box-sizing: border-box;
-    line-height: 40px;
+    line-height: 45px;
 }
 .logout-icon {
     width: 24px;
     height: 24px;
     position: absolute;
     right: 30px;
-    top: 9px;
+    top: 7px;
 }
 
 /*Notes*/
@@ -140,6 +141,7 @@ body {
     font-weight: 400;
     font-size: 20px;
     color: #000000;
+    line-height: 22px;
 }
 .note-text {
     margin: 0 0 0 10px;
