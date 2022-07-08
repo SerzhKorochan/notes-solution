@@ -30,6 +30,8 @@ function getBuildedNoteElement(id, text) {
     removeNoteBtn.appendChild(removeNoteIcon);
     noteContainer.appendChild(removeNoteBtn);
 
+    noteContainer.note_id = id;
+
     return noteContainer;
 }
 

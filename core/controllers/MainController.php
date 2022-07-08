@@ -30,6 +30,18 @@ class MainController {
 
     public function run() {
         $request = $_SERVER['REQUEST_URI'];
+        
+        if (strpos($request, "?")) {
+            $uriParts = explode("?", $request);
+            $request = $uriParts[0];
+            $uriParams = $uriParts[1];
+
+            $getVar = explode("=", $uriParams);
+            
+            if ($getVar[0] == "id") {
+                $noteId = (int)$getVar[1];
+            }
+        }
 
         if (isset($_SESSION['user_id'])) {
             $note = new NoteModel(
@@ -88,6 +100,14 @@ class MainController {
                 }
                 header('Location: /');
                 break;
+
+            case '/note/remove': 
+                if (isset($noteId)) {
+                    $note->removeNote($noteId);
+                }
+                header('Location: /');
+                break;
+                
 
             case '/notes': 
                 $noteList = $note->getNotesList();
