@@ -44,3 +44,7 @@ function showNotes() {
 }
 
 $body.onload = showNotes;
+
+$(".create-note-icon").click(function () {
+    $("form#create-note-form").submit();
+});
