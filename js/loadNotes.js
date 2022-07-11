@@ -1,7 +1,7 @@
 $body = document.querySelector("body");
 $noteListContainer = document.querySelector(".notes-list-container");
 
-function getBuildedNoteElement(id, text) {
+function getBuildedNoteElement(orderedNum, id, text) {
     let noteContainer = document.createElement("div");
     noteContainer.className = "note-container";
 
@@ -10,7 +10,7 @@ function getBuildedNoteElement(id, text) {
 
     let noteNum = document.createElement("span");
     noteNum.className = "note-num";
-    noteNum.innerHTML = "#" + id + ".";
+    noteNum.innerHTML = "#" + orderedNum + ".";
 
     let noteText = document.createElement("p");
     noteText.className = "note-text";
@@ -18,7 +18,7 @@ function getBuildedNoteElement(id, text) {
 
     let removeNoteBtn = document.createElement("a");
     removeNoteBtn.className = "remove-note-btn";
-    removeNoteBtn.href = "/";
+    removeNoteBtn.href = "/note/remove?id=" + id;
 
     let removeNoteIcon = document.createElement("img");
     removeNoteIcon.src = "/img/trash-icon.svg";
@@ -30,16 +30,14 @@ function getBuildedNoteElement(id, text) {
     removeNoteBtn.appendChild(removeNoteIcon);
     noteContainer.appendChild(removeNoteBtn);
 
-    noteContainer.note_id = id;
-
     return noteContainer;
 }
 
 function showNotes() {
-    $.getJSON("http://local.testwebsite.com/notes", function (data) {
+    $.getJSON("http://chat.local/notes", function (data) {
         for (let i = 0; i < data.length; i++) {
             $noteListContainer.appendChild(
-                getBuildedNoteElement(i + 1, data[i]["text"])
+                getBuildedNoteElement(i + 1, data[i]["id"], data[i]["text"])
             );
         }
     });
